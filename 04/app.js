@@ -13,9 +13,18 @@ const currYear = new Date().getFullYear();
 
 // 2 SPOSÓB - czyżby trochę lepszy z tej racji, że nie musimy za każdym razem stosować map? :)
 
-const passedYears = countDiff(years)
+// const passedYears = countDiff(years)
 
-function countDiff(arr) {
-  return arr.map(function(year) {return currYear - year})};
+// function countDiff(arr) {
+//   return arr.map(function(year) {return currYear - year})};
+
+// console.log(passedYears)
+
+// 3 SPOSÓB :)
+const passedYears = countDiff(years, currYear)
+
+function countDiff(arr, chooseYear) {
+  return arr.map(function (item) { return chooseYear - item })
+};
 
 console.log(passedYears)
